@@ -15,21 +15,103 @@
 
 ## 📌 Problem & Motivation
 
-Traditional career pivot advice is plagued by major flaws:
-1. **Conflicting & Outdated Roadmaps:** Generic advice recommends 15+ disconnected tools without citing empirical employer demand.
+Traditional career transition advice suffers from major flaws:
+1. **Conflicting & Outdated Roadmaps:** Influencers recommend 15+ disconnected tools without citing empirical employer demand.
 2. **Syndicated Job Board Duplication:** Multiple boards (LinkedIn, Indeed, Glassdoor) post identical listings, artificially distorting skill frequencies.
 3. **Unrealistic Pacing:** Candidates with full-time commitments (e.g. 10–12 hrs/week) are assigned impossible 40-hr/week curriculums.
 4. **Dead Resource Links:** Outdated recommendations point to 404 broken URLs and paid paywalls.
 
 ---
 
-## 🔄 Agentic Architecture & Workflow
+## 🔄 Agentic Architecture & Pipeline Flow
 
-```mermaid
-flowchart TD
-    A[👤 Candidate Profile & Resume<br/><b>e.g. Mechanical Engineer Background</b>] --> B[1. Ingestion & Deduplication Agent<br/><b>Scrapes 30+ Postings & Merges Cross-Board Duplicates</b>]
-    B --> C[2. Empirical Skill Frequency Engine<br/><b>SQL 93%, Power BI 57%, Python 53%, Excel 47%</b>]
-    C --> D[3. Anti-Hallucination Resume Benchmarker<br/><b>Strict Proof Matching: Verified Evidence vs Critical Gaps</b>]
-    D --> E{4. Human-in-the-Loop Gateway<br/><b>Candidate Explicitly Approves Scope & Budget</b>}
-    E -->|Approved| F[5. Grounding & Link Verification Audit<br/><b>Automated HTTP 200 Checks on Curated Resources</b>]
-    F --> G[📄 Executive Export Engine<br/><b>PDF Report • Markdown Summary • JSON Data</b>]
+The RoleSync system executes an autonomous 5-stage closed loop:
+
+### 1️⃣ Perception & Input Validation
+* **Action:** Collects candidate profile (e.g., Mechanical Engineer background, AutoCAD, Excel formulas), target role (Data Analyst), target city, and realistic weekly study commitment (12 hrs/week).
+* **Guarantees:** Strict schema validation with session-state immutability.
+
+### 2️⃣ Ingestion & Cross-Board Deduplication Engine
+* **Action:** Ingests ~30 live postings across LinkedIn, Indeed, Glassdoor, and enterprise career portals.
+* **Algorithm:** Computes normalized company-title fingerprint hashes and text similarity vectors to merge syndicated duplicates into one canonical posting.
+* **Guarantees:** Prevents artificial inflation of skill demand frequencies (verified in TC2).
+
+### 3️⃣ Deterministic Skill Frequency & Resume Benchmarking
+* **Action:** Calculates empirical demand percentages (SQL 93%, Power BI 57%, Python 53%, Excel 47%).
+* **Anti-Hallucination Policy:** Evaluates the candidate resume strictly against extracted skills. Only assigns **Verified Evidence** if literal proof exists in the resume. High-frequency missing skills are strictly marked as **Critical Gaps**.
+
+### 4️⃣ Human-in-the-Loop (HITL) Approval Gateway
+* **Action:** Before generating study schedules or saving action items, the agent pauses and presents an actionable proposal detailing top 3 prioritized gaps, weekly hour allocations, and project milestones.
+* **Safety Boundary:** Enforces explicit human confirmation before the transition plan is finalized.
+
+### 5️⃣ Grounding & Automated Link Verification
+* **Action:** Pairs every identified gap with 100% free, verified learning materials (Khan Academy SQL, Microsoft Learn Power BI, Kaggle Pandas).
+* **Audit Sub-Agent:** Automatically tests every citation and resource link (HTTP 200 checks) to guarantee zero dead links.
+* **Export Engine:** Produces downloadable executive reports in **PDF**, **Markdown**, and **JSON**.
+
+---
+
+## 📊 End-to-End Execution Pipeline Summary
+
+| Stage | Sub-Agent | Core Responsibility | Output Artifact |
+| :---: | :--- | :--- | :--- |
+| **01** | **Ingestion Sub-Agent** | Scrapes 30+ live market listings across top tech employers | Clean raw job list |
+| **02** | **Deduplication Engine** | Merges cross-board syndicated duplicates via canonical hashes | Deduplicated job dataset |
+| **03** | **Frequency Engine** | Computes statistical skill demand frequencies across listings | Ranked skill demand matrix |
+| **04** | **Resume Benchmarker** | Matches resume text against demand with zero hallucination | Verified skills vs. Critical gaps |
+| **05** | **HITL Gateway** | Prompts candidate to review & approve the customized proposal | Human approval token |
+| **06** | **Verification Engine** | Verifies resource links (HTTP 200) & builds time-budgeted plan | Executive PDF, Markdown & JSON |
+
+---
+
+## ✨ Key Agentic Capabilities
+
+- **30+ Live Job Postings Ingestion:** Gathers live listings from leading technology employers (Flipkart, Swiggy, PhonePe, Infosys, Dell, TCS).
+- **Cross-Board Deduplication Engine:** Uses normalized company-title fingerprint hashes to merge syndicated cross-postings into a single canonical entry, avoiding skewed frequency counts.
+- **Empirical Skill Demand Frequencies:** Ranks required competencies strictly based on market data rather than subjective guessing.
+- **Anti-Hallucination Resume Benchmarker:** Inspects candidate background (e.g., Mechanical Engineering with AutoCAD and Excel) and only marks skills as verified if concrete evidence exists in the text. Missing high-frequency skills are strictly labeled as Critical Gaps.
+- **Human-in-the-Loop (HITL) Gateway:** Requires explicit human candidate consent on prioritized gaps and weekly hourly budget before generating study schedules.
+- **100% Free Curated Resources:** Pairs every skill gap with tested, high-quality, free tutorials and projects (Khan Academy, Microsoft Learn, Kaggle, FreeCodeCamp).
+- **Automated Verification Engine:** Runs background HTTP audits to confirm that all cited job postings and resource links are live and reachable.
+- **Multi-Format Executive Exports:**
+  - 📄 **Executive PDF** (formatted via `jspdf`)
+  - 📝 **Markdown Report** (`.md`)
+  - 📊 **Structured JSON** (`.json`)
+
+---
+
+## 🧪 Automated Test Suite (100% Pass)
+
+RoleSync features an integrated **Validation Suite** tab with automated assertion tests:
+
+| Test Case | Description | Assertion Check | Result |
+| :--- | :--- | :--- | :---: |
+| **TC1** | 30 Data Analyst Postings Analysis | Extracts full frequency distribution across 30 live postings | **PASSED** |
+| **TC2** | Cross-Board Syndication Deduplication | Merges 3 identical listings across LinkedIn/Indeed into 1 count | **PASSED** |
+| **TC3** | Resume Anti-Hallucination Integrity | Flags SQL as Critical Gap, verifies Excel, invents zero skills | **PASSED** |
+| **TC4** | Low-Density Human Escalation | Pauses when <5 jobs exist; requests user permission to widen radius | **PASSED** |
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React 19, TypeScript, Tailwind CSS, Vite
+- **Document Generation:** jsPDF
+- **Icons & UI:** Lucide React
+- **Algorithms:** Deterministic Token Distance, Canonical Fingerprint Hashing
+- **Deployment:** Google Cloud Run & Vite
+
+---
+
+## 💻 Local Installation & Setup
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/YOUR_USERNAME/skill-gap-analyzer.git
+cd skill-gap-analyzer
+
+# 2. Install dependencies
+npm install
+
+# 3. Start local development server
+npm run dev
