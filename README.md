@@ -100,9 +100,3 @@ RoleSync features an integrated **Validation Suite** tab with automated assertio
 - **Icons & UI:** Lucide React
 - **Algorithms:** Deterministic Token Distance, Canonical Fingerprint Hashing
 - **Deployment:** Google Cloud Run & Vite
-
-# 2. Install dependencies
-npm install
-
-# 3. Start local development server
-npm run dev
