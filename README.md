@@ -8,12 +8,12 @@
 
 ---
 
-## 🚀 Live Demo URL
+Live Demo URL
 **Hosted on Google Cloud:** [https://ais-pre-faagtfdpmlyear6ld6opni-515277225003.asia-northeast1.run.app](https://ais-pre-faagtfdpmlyear6ld6opni-515277225003.asia-northeast1.run.app)
 
 ---
 
-## 📌 Problem & Motivation
+Problem & Motivation
 
 Traditional career pivot advice is plagued by three major flaws:
 1. **Conflicting & Outdated Roadmaps:** Influencer advice and static bootcamps recommend generic lists of 15+ technologies without citing real, current employer demand.
@@ -55,7 +55,7 @@ Traditional career pivot advice is plagued by three major flaws:
 └────────────────────────────────────────┘
 ---
 
-## ✨ Key Agentic Capabilities
+Key Agentic Capabilities
 
 - **30+ Live Job Postings Ingestion:** Gathers live listings from leading technology employers (Flipkart, Swiggy, PhonePe, Infosys, Dell, TCS).
 - **Cross-Board Deduplication Engine:** Uses normalized company-title fingerprint hashes and text similarity vectors to merge syndicated cross-postings into a single canonical entry, avoiding skewed frequency counts.
@@ -71,7 +71,7 @@ Traditional career pivot advice is plagued by three major flaws:
 
 ---
 
-## 🧪 Automated Test Suite (100% Pass)
+Automated Test Suite (100% Pass)
 
 RoleSync features an integrated **Validation Suite** tab with automated assertion tests:
 
@@ -84,7 +84,7 @@ RoleSync features an integrated **Validation Suite** tab with automated assertio
 
 ---
 
-## 🛠️ Tech Stack
+Tech Stack
 
 - **Frontend:** React 19, TypeScript, Tailwind CSS, Vite
 - **Document Generation:** jsPDF
@@ -92,9 +92,7 @@ RoleSync features an integrated **Validation Suite** tab with automated assertio
 - **Algorithms:** Deterministic Token Distance, Canonical Fingerprint Hashing
 - **Deployment:** Google Cloud Run & Vite
 
----
-
-## 💻 Local Installation & Setup
+Local Installation & Setup
 
 ```bash
 # 1. Clone the repository
