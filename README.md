@@ -8,8 +8,8 @@
 
 ---
 
-## Live Demo URL
-**Hosted on Google Cloud:** [https://ais-pre-faagtfdpmlyear6ld6opni-515277225003.asia-northeast1.run.app](https://ais-pre-faagtfdpmlyear6ld6opni-515277225003.asia-northeast1.run.app)
+## Live Demo URL 
+https://skill-gap-analyzer-pearl.vercel.app/
 
 ---
 
