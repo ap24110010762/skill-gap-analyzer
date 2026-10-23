@@ -65,9 +65,9 @@ Key Agentic Capabilities
 - **100% Free Curated Resources:** Pairs every skill gap with tested, high-quality, free tutorials and projects (Khan Academy, Microsoft Learn, Kaggle, FreeCodeCamp).
 - **Automated Verification Engine:** Runs background HTTP audits to confirm that all cited job postings and resource links are live and reachable.
 - **Multi-Format Executive Exports:**
-  - 📄 **Executive PDF** (formatted via `jspdf`)
-  - 📝 **Markdown Report** (`.md`)
-  - 📊 **Structured JSON** (`.json`)
+  - **Executive PDF** (formatted via `jspdf`)
+  - **Markdown Report** (`.md`)
+  - **Structured JSON** (`.json`)
 
 ---
 
