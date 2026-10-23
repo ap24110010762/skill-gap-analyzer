@@ -8,12 +8,12 @@
 
 ---
 
-## Live Demo URL
+## 🚀 Live Demo URL
 **Hosted on Google Cloud:** [https://ais-pre-faagtfdpmlyear6ld6opni-515277225003.asia-northeast1.run.app](https://ais-pre-faagtfdpmlyear6ld6opni-515277225003.asia-northeast1.run.app)
 
 ---
 
-## Problem & Motivation
+## 📌 Problem & Motivation
 
 Traditional career pivot advice is plagued by major flaws:
 1. **Conflicting & Outdated Roadmaps:** Generic advice recommends 15+ disconnected tools without citing empirical employer demand.
@@ -23,7 +23,7 @@ Traditional career pivot advice is plagued by major flaws:
 
 ---
 
-## Agentic Architecture & Workflow
+## 🔄 Agentic Architecture & Workflow
 
 ```mermaid
 flowchart TD
