@@ -101,15 +101,6 @@ RoleSync features an integrated **Validation Suite** tab with automated assertio
 - **Algorithms:** Deterministic Token Distance, Canonical Fingerprint Hashing
 - **Deployment:** Google Cloud Run & Vite
 
----
-
-##  Local Installation & Setup
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/skill-gap-analyzer.git
-cd skill-gap-analyzer
-
 # 2. Install dependencies
 npm install
 
